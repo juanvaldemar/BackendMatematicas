@@ -26,6 +26,12 @@ public class Usuario implements Serializable {
     @Column(name = "sexo_usuario") //=> ID
     private String sexo_usuario;
 
+    @Column(name = "password") //=> ID
+    private String password;
+
+    @Column(name = "email") //=> ID
+    private String email;
+
     @Column(name = "fecha_usuario") //=> ID
     private Date fecha_usuario = new Date();
 
