@@ -26,4 +26,7 @@ public class Tema implements Serializable {
     @Column(name = "preguntas_tema") //=> ID
     private String preguntas_tema;
 
+    @Column(name = "posicion") //=> ID
+    private String posicion;
+
 }
