@@ -16,7 +16,7 @@ public class ReporteServiceImpl implements ReporteService {
 
     @Override
     public List<Reporte> findAll() {
-        return reporteRepository.findAll();
+        return reporteRepository.listado();
     }
 
     @Override

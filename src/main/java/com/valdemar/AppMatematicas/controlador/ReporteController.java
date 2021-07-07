@@ -5,7 +5,9 @@ import com.valdemar.AppMatematicas.service.ReporteService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import java.sql.Timestamp;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 @RestController
@@ -23,6 +25,14 @@ public class ReporteController {
 
 
         try {
+
+            // 2021-03-24 16:48:05.591
+            Timestamp timestamp = new Timestamp(System.currentTimeMillis());
+
+            Date date = new Date();
+            Timestamp actual = new Timestamp(date.getTime());
+
+            request.setFecha(actual);
             response = service.save(request);
         } catch (Exception e) {
             System.out.println("Error guardarReporte Controller: "+ e);
@@ -40,6 +50,7 @@ public class ReporteController {
 
         try {
             response = service.findAll();
+
         } catch (Exception e) {
             System.out.println("Error guardarReporte Controller: "+ e);
         }

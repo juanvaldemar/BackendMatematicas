@@ -7,6 +7,7 @@ import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
 import java.io.Serializable;
+import java.sql.Timestamp;
 import java.util.Date;
 
 @Entity
@@ -24,10 +25,20 @@ public class Reporte implements Serializable {
     private String nombre;
 
     @Column(name = "fecha") //=> ID
-    private Date fecha = new Date();
+    private Timestamp fecha;
 
     @Column(name = "nota") //=> ID
     private String nota;
+
+    @Column(name = "motivacion") //=> ID
+    private String motivacion;
+
+    @Column(name = "satisfaccion") //=> ID
+    private String satisfaccion;
+
+
+    @Column(name = "cantidad") //=> ID
+    private String cantidad;
 
 
 }
